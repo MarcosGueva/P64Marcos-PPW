@@ -1,0 +1,12 @@
+p{
+    float: left;
+    width: 200;
+    font-size: 18px;
+    background-color: lightskyblue;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.limpia{
+    clear: both;
+}
