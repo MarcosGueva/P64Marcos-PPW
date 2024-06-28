@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Javascript DOM</title>
         <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+        <script type="text/Javascript" src="js/script.js"></script>
     </head>
     <body>
         <section class="container">
             <div class="item header"></div>
-            <div class="item left"></div>
-            <div class="item content">
-                <div class="item1 ">Item 1</div>
-                <div class="item2 ">Item 2</div>
-                <div class="item3 ">Item 3</div>
-                <div class="item4 ">Item 4</div>
-                <div class="item5 ">Item 5</div>
+            <div class="item left">
+                <button class="item-button" onclick="cargar_elemento()">Agregar</button>
             </div>
-            <div class="item right"></div>
+            <div class="item content" id="content">
+            </div>
             <div class="item footer"></div>
         </section>
     </body>

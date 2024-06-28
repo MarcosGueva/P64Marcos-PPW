@@ -4,8 +4,8 @@
 
 .container {
     display: grid;
-    grid-template: 150px 1fr 50px/ 200px 1fr;
-    grid-template-areas: "header header""left content""footer footer";
+    grid-template: 150px 1fr 50px / 200px 1fr;
+    grid-template-areas: "header header" "left content" "footer footer";
     grid-gap: 5px;
     height: 100vh;
 }
@@ -18,30 +18,40 @@
 
 .header {
     grid-area: header;
-
 }
-.letf{
+
+.left {
     grid-area: left;
-
-}
-
-.content{
-    grid-area: content;
     display: flex;
     flex-direction: column;
+    grid-gap: 5px;
 }
 
-.footer{
+.content {
+    grid-area: content;
+    grid-gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
     grid-area: footer;
-
 }
-.item1,.item2,.item3,.item4,.item5{
-    border: 1px solid black;
-    padding: 20px;
+
+.item-box {
+    border: 3px solid black;
     height: fit-content;
     width: fit-content;
+    padding: 20px;
     font-size: 20px;
     color: aliceblue;
     font-weight: bolder;
     text-align: center;
+}
+
+.item-button {
+    font-size: 20px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
 }
