@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Recetas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Recetas</h1>
+    </header>
+    <main>
+        <section id="add-recipe">
+            <h2>Agregar Nueva Receta</h2>
+            <form id="recipe-form">
+                <label for="recipe-name">Nombre de la Receta:</label>
+                <input type="text" id="recipe-name" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+        <section id="recipe-list">
+            <h2>Recetas</h2>
+            <ul id="recipes"> 
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p></p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

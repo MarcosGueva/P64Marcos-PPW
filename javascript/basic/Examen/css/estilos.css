@@ -8,10 +8,11 @@
     grid-template-areas: "header header" "left content" "footer footer";
     grid-gap: 5px;
     height: 100vh;
+    text-align: center;
 }
 
 .item {
-    background-color: dodgerblue;
+    background-color: cornflowerblue ;
     padding: 10px;
     border: 1px solid lightgray;
 }
@@ -19,6 +20,7 @@
 .header {
     grid-area: header;
 }
+
 
 .left {
     grid-area: left;
@@ -41,7 +43,7 @@
 }
 
 .item-box {
-    border: 3px solid black;
+    border: 1px solid black;
     height: fit-content;
     width: fit-content;
     padding: 20px;
@@ -50,12 +52,28 @@
     font-weight: bolder;
     text-align: center;
 }
-
-.item-button {
+.item-box1 {
+    border: 0px solid black;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
     font-size: 20px;
+    color: aliceblue;
+    font-weight: bolder;
+    text-align: center;
+}
+.item-button {
+    font-size: 15px;
     box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
 }
 
 input {
     font-size: 20px;
+}
+
+.imagen1{
+    width: 180px;
+    height: 250px;
+    border: 2px solid black;
+
 }

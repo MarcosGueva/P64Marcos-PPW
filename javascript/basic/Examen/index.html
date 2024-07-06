@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EXAMEN</title>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+        <script type="text/Javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <section class="container">
+            <main class="item header">  
+                <div>
+                    <h1 style="color:ornflowerblue ; font-size:100px;">RECETAS</h1>
+                </div>        
+            </main>
+            <div class="item left">
+                <h1 style="color:ornflowerblue ; font-size:20px;">AGREGA UNA NUEVA RECETA</h1>
+                <img src="IMA/rece.jpg"class="imagen1">Nombre Receta
+                
+                <input type="text" value="" id="texto" />
+                <button class="item-button" onclick="cargar_elemento()">Agregar</button>
+                <button class="item-button" onclick="eliminar_elemento()">Eliminar</button>
+                Descripcion
+
+                <input type="text" value="" id="Descripcion" />
+                <button class="item-button" onclick="cargar_elemento1()">Agregar</button>
+                <button class="item-button" onclick="eliminar_elemento1()">Eliminar</button>
+            </div>
+            <div class="item content" id="content">
+            </div>
+            <div class="item footer"></div>
+        </section>
+    </body>
+</html>
