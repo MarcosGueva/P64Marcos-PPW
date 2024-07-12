@@ -1,0 +1,74 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-custom {
+    background-color: #333;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #f0f0f0;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background: url('../media/preview.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header .profile img {
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+header .subheading {
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h4 {
+    font-size: 2rem;
+}
+
+.card {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.bg-pink {
+    background-color: #ff6f91;
+}
+
+.badge-info {
+    background-color: #17a2b8;
+}
+
+.footer-1 {
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-1 a {
+    color: #fff;
+}
