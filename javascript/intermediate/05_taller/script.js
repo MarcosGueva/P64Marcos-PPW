@@ -19,3 +19,7 @@ if(articulos_baratos){
 }else{
     console.log('No existen articulos baratos.')
 }
+
+console.log('================================')
+console.log('USO DEL FILTER')
+console.log('================================')
