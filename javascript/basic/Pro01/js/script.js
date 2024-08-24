@@ -14,10 +14,10 @@ let difficulty = 'easy'; // Default difficulty
 let gameState = 'start'; // 'start', 'playing', 'over'
 
 // Game settings
-const bird = { x: 50, y: 150, width: 30, height: 30, gravity: 0.2, lift: -6, velocity: 0 };
+const bird = { x: 50, y: 150, width: 30, height: 30, gravity: 0.5, lift: -6, velocity: 0 };
 let pipes = [];
 const pipeWidth = 100;
-const gapSize = 150;  // Tamaño del espacio para pasar entre los tubos
+const gapSize = 125;  // Tamaño del espacio para pasar entre los tubos
 let frameCount = 0;
 let score = 0;
 
@@ -161,7 +161,7 @@ function gameLoop() {
         }
 
         pipes.forEach(pipe => {
-            pipe.x -= 2; // Speed of the pipes moving left
+            pipe.x -= 2.75; // Speed of the pipes moving left
 
             // Top pipe
             ctx.drawImage(topPipeImage, pipe.x, 0, pipeWidth, pipe.upperHeight);
