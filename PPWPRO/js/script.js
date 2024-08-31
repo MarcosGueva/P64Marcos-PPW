@@ -32,7 +32,7 @@ let difficulty = 'easy';
 let gameState = 'start';
 
 // Game settings
-const bird = { x: 50, y: 150, width: 30, height: 30, gravity: 0.315, lift: -6, velocity: 0 };
+const bird = { x: 50, y: 150, width: 30, height: 30, gravity: 0.2, lift: -6, velocity: 0 };
 let pipes = [];
 const pipeWidth = 100;
 const gapSize = 125;
@@ -266,7 +266,7 @@ function gameLoop() {
         }
 
         pipes.forEach(pipe => {
-            pipe.x -= 1.75;
+            pipe.x -= 1.70;
 
             // Top pipe
             ctx.drawImage(topPipeImage, pipe.x, 0, pipeWidth, pipe.upperHeight);
