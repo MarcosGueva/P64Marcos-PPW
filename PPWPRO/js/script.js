@@ -32,7 +32,7 @@ let difficulty = 'easy';
 let gameState = 'start';
 
 // Game settings
-const bird = { x: 50, y: 150, width: 30, height: 30, gravity: 0.2, lift: -6, velocity: 0 };
+const bird = { x: 50, y: 150, width: 20, height: 20, gravity: 0.3, lift: -6, velocity: 0 };
 let pipes = [];
 const pipeWidth = 100;
 const gapSize = 125;
