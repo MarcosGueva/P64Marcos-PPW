@@ -26,6 +26,10 @@ const difficultyButton = document.getElementById('difficultyButton');
 const replayButton = document.getElementById('replayButton');
 const backToStartButton = document.getElementById('backToStartButton');
 const leaderboardTableBody = document.getElementById('leaderboard').querySelector('tbody');
+const showLeaderboardButton = document.getElementById('showLeaderboardButton');
+const leaderboardSection = document.getElementById('leaderboardSection'); // Sección de la tabla
+const backToStartButtonLeaderboard = document.getElementById('backToStartButtonLeaderboard'); // Botón de volver al inicio desde la tabla
+
 
 let username = '';
 let difficulty = 'easy';
@@ -123,6 +127,12 @@ const fetchLeaderboard = async () => {
     }
 };
 
+// Mostrar la tabla de puntajes desde la pantalla de inicio
+showLeaderboardButton.addEventListener('click', () => {
+    fetchLeaderboard();
+    gameOverScreen.style.display = 'flex';
+    startScreen.style.display = 'none';
+});
 
 
 // Event listeners for buttons
@@ -168,14 +178,13 @@ difficultyButton.addEventListener('click', () => {
     }
 });
 
-// Bird jump
-document.addEventListener('keydown', () => {
-    if (gameState === 'playing') {
+// Bird jump (Evita reiniciar con "Espacio" en Game Over)
+document.addEventListener('keydown', (event) => {
+    if (gameState === 'playing' && event.code === 'Space') {
         bird.velocity = bird.lift;
-    } else if (gameState === 'over') {
-        resetGame();
     }
 });
+
 
 function resetGame() {
     bird.y = 150;
@@ -233,6 +242,32 @@ function drawGameOverScreen() {
     // Llamar a la función para obtener la tabla de clasificación
     fetchLeaderboard();
 }
+
+// Modificar el evento para solo reiniciar el juego si ambos botones fueron presionados
+let replayPressed = false;
+let backToStartPressed = false;
+
+replayButton.addEventListener('click', () => {
+    replayPressed = true;
+    checkRestartConditions();
+});
+
+backToStartButton.addEventListener('click', () => {
+    backToStartPressed = true;
+    checkRestartConditions();
+});
+
+// Solo reinicia el juego si ambos botones fueron presionados
+function checkRestartConditions() {
+    if (replayPressed && backToStartPressed) {
+        resetGame();
+        gameOverScreen.style.display = 'none';
+        startScreen.style.display = 'flex';
+        replayPressed = false;
+        backToStartPressed = false;
+    }
+}
+
 
 // Game loop
 function gameLoop() {
