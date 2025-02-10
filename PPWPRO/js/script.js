@@ -185,7 +185,6 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-
 function resetGame() {
     bird.y = 150;
     bird.velocity = 0;
@@ -196,6 +195,9 @@ function resetGame() {
     startScreen.style.display = 'flex';
     canvas.style.display = 'none';
     gameOverScreen.style.display = 'none';
+
+    // ✅ Enviar solo la señal al Arduino para resetear la pantalla LCD
+    socket.emit('resetGame');
 }
 
 // Generate random multiplication problems based on difficulty

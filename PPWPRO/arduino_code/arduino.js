@@ -39,7 +39,14 @@ io.on('connection', (socket) => {
     });
 
     socket.on('resetGame', () => {
-        port.write('Z\n'); // Reiniciar puntaje en la pantalla LCD
+        console.log('🔄 Reiniciando pantalla LCD en Arduino...');
+        port.write('Z\n', (err) => {
+            if (err) {
+                console.error('❌ Error al enviar Z:', err.message);
+            } else {
+                console.log('✅ Comando Z enviado correctamente al Arduino');
+            }
+        });
     });
 
     // Escuchar respuestas del Arduino (opcional)
